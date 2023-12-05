@@ -1,0 +1,13 @@
+CREATE TABLE transaksi (
+id INT PRIMARY KEY AUTO_INCREMENT,
+id_pelanggan VARCHAR(5) NOT NULL,
+id_produk VARCHAR(100) NOT NULL,
+qty INT NOT NULL,
+total_harga INT NOT NULL,
+tanggal DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (id_pelanggan) REFERENCES pelanggan(id),
+FOREIGN KEY (id_produk) REFERENCES produk(id)
+);
+
+SHOW TABLES;
+DESCRIBE transaksi;
